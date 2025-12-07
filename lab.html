@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Members – a2z Lab</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #2d3e50;
+      padding: 1rem;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 8rem 4rem;
+      background: url('img/header-background_4.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    /* PERSON SECTION */
+    .person-section {
+      background: white;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* FLEXIBLE PERSON LAYOUT */
+    .person-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .person-text {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+    }
+
+    .person-photo img {
+  width: 200px;        /* ensure width = height */
+  height: 200px;       /* ensures square */
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* crops the image to fit the circle */
+    }
+
+
+
+    /* Responsive stacking */
+    @media (max-width: 600px) {
+      .person-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .person-text {
+        text-align: center;
+      }
+      .person-photo img {
+        max-width: 150px;
+        margin-top: 1rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #2d3e50;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lab.html">Lab</a>
+    <a href="publications.html">Publications</a>
+    <a href="UPICAS.html">UPICAS</a>
+    <a href="projects.html">Other Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <h1>Lab Members</h1>
+      <p>Meet the researchers and facilitators of the a2z Lab</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- Nora Section: text left, photo right -->
+    <section class="person-section">
+      <div class="person-content">
+        <div class="person-text">
+          <h2>Nora Vitali, M.Sc.</h2><br>
+          Family Psychotherapist, PhD Candidate, and Facilitator
+          <p>
+            Nora specializes in family therapy and developmental psychology. Her research focuses on understanding family dynamics and supporting adolescents in challenging situations.
+          </p>
+          <p>
+            Languages: Luxembourgish, German, French, and English
+          </p>
+        </div>
+        <div class="person-photo">
+          <img src="img/nora.jpg" alt="Nora Vitali">
+        </div>
+      </div>
+    </section>
+
+    <!-- Leonie Section: photo left, text right -->
+    <section class="person-section">
+      <div class="person-content">
+        <div class="person-photo">
+          <img src="img/leonie.jpg" alt="Leonie Constantinides">
+        </div>
+        <div class="person-text">
+          <h2>Leonie Constantinides, B.Sc.</h2><br>
+          M.Sc. Candidate, and Facilitator
+          <p>
+            Leonie is a research assistant focusing on developmental psychology and family studies. She contributes to multiple ongoing projects, supporting data collection, analysis, and community engagement.
+          </p>
+          <p>
+            Languages: English, German, and French
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sabina Section: text left, photo right -->
+    <section class="person-section">
+      <div class="person-content">
+        <div class="person-text">
+          <h2>Sabina Anton</h2><br>
+          B.Sc. Candidate, and Facilitator
+          <p>
+            Sabina is a research coordinator at a2z Lab, helping manage projects and facilitating collaboration across research studies. She ensures smooth communication and contributes to applied research initiatives.
+          </p>
+          <p>
+            Languages: English, German, and French
+          </p>
+        </div>
+        <div class="person-photo">
+          <img src="img/sabina.jpg" alt="Sabina Anton">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 a2z Lab — All rights reserved.
+  </footer>
+
+</body>
+</html>
