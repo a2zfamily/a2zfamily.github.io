@@ -52,37 +52,51 @@
       z-index: 1;
     }
 
+    /* ===== PEOPLE LAYOUT ===== */
     .people-wrapper {
       display: flex;
       gap: 2rem;
       max-width: 1200px;
-      margin: 2rem auto;
+      margin: 3rem auto;
     }
 
     .person-section {
       background: white;
-      padding: 3rem 2rem;
+      padding: 2.5rem 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      gap: 2rem;
       flex: 1;
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;       /* FOTO OBEN */
+      align-items: flex-start;      /* LINKS */
+      gap: 1.5rem;
     }
 
     .person-photo {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #2d3e50;
     }
 
+    .person-text {
+      text-align: left;
+    }
+
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .people-wrapper {
         flex-direction: column;
       }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #2d3e50;
+      color: white;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -109,9 +123,13 @@
   <!-- ANKE (links) -->
   <section class="person-section" id="anke-section">
     <img src="img/anke.jpg" alt="Anke Weber" class="person-photo">
-    <div>
+    <div class="person-text">
       <h2>Anke Weber, Dr. phil.</h2>
       <p>Founder, Researcher</p>
+      <p>
+        My name is Anke Weber. I am a Researcher focusing on developmental and
+        educational psychology, family interactions, and child development.
+      </p>
       <p><strong>Languages:</strong> English, German, French</p>
     </div>
   </section>
@@ -119,16 +137,20 @@
   <!-- ZIWEN (rechts) -->
   <section class="person-section" id="ziwen-section">
     <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="person-photo">
-    <div>
+    <div class="person-text">
       <h2>Ziwen Teuber, Dr. rer. nat.</h2>
       <p>Founder, Senior Researcher and Facilitator</p>
+      <p>
+        My name is Ziwen Teuber. I am a Senior Researcher holding PhD supervision
+        rights and lead the FNR CORE project UPICAS.
+      </p>
       <p><strong>Languages:</strong> English, German, Mandarin</p>
     </div>
   </section>
 
 </div>
 
-<footer style="text-align:center; padding:2rem; background:#2d3e50; color:white;">
+<footer>
   © 2025 a2z family lab — All rights reserved.
 </footer>
 
