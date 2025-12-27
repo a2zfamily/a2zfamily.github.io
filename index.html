@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>a2z family lab – Family Research and Evidence-Based Family Coaching</title>
+  <title>a2z family lab | Team</title>
 
   <style>
     body {
@@ -12,9 +12,9 @@
       background: #f5f7fa;
       color: #222;
       line-height: 1.6;
-      padding: 0 1rem;
     }
 
+    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: center;
@@ -31,20 +31,27 @@
       font-size: 1.1rem;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
     header {
       text-align: center;
-      padding: 8rem 4rem;
+      padding: 4rem 2rem;
       background: url('img/header-background_3.jpg') no-repeat center center;
       background-size: cover;
       color: white;
       position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     header::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45);
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
     }
 
     .header-content {
@@ -52,39 +59,45 @@
       z-index: 1;
     }
 
-    /* ===== PEOPLE LAYOUT ===== */
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    /* PEOPLE LAYOUT */
     .people-wrapper {
       display: flex;
       gap: 2rem;
-      max-width: 1200px;
-      margin: 3rem auto;
     }
 
+    /* PERSON CARD – same style as UPICAS sections */
     .person-section {
       background: white;
-      padding: 2.5rem 2rem;
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       flex: 1;
       display: flex;
-      flex-direction: column;       /* FOTO OBEN */
-      align-items: flex-start;      /* LINKS */
+      flex-direction: column;
+      align-items: flex-start;
       gap: 1.5rem;
     }
 
     .person-photo {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #2d3e50;
     }
 
-    .person-text {
-      text-align: left;
+    h2 {
+      margin-top: 0;
     }
 
-    /* ===== RESPONSIVE ===== */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .people-wrapper {
         flex-direction: column;
@@ -96,13 +109,14 @@
       padding: 2rem;
       background: #2d3e50;
       color: white;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
   <a href="index.html">Home</a>
   <a href="lab.html">Lab</a>
@@ -112,47 +126,52 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HEADER -->
 <header>
   <div class="header-content">
-    <h1>– a2z family lab –<br>Family Research and Evidence-Based Family Coaching</h1>
-    <p> Welcome! The a2z family lab was born from the curiosity and drive of two dedicated researchers, 
-      Ziwen Teuber and Anke Weber, psychologists with PhDs from Germany. Founded within the Department of Behavioral 
-      and Cognitive Sciences at the University of Luxembourg, our lab explores how children, adolescents, and 
-      families navigate life and learning. At a2z family Lab, research meets real life: every study uncovers insights 
-      that deepen our understanding of human development and family functioning as well as inform our family coaching 
-      programs to support parents and caregivers in fostering thriving, resilient families. </p>
+    <h1>– a2z family lab – <br>Evidence-Based Family Coaching</h1>
+    Welcome! The a2z family lab was born from the curiosity and drive of two dedicated researchers, Ziwen Teuber and Anke Weber, psychologists with PhDs from Germany. Founded within the Department of Behavioral and Cognitive Sciences at the University of Luxembourg, our lab explores how children, adolescents, and families navigate life and learning. At a2z family Lab, research meets real life: every study uncovers insights that deepen our understanding of human development and family functioning as well as inform our family coaching programs to support parents and caregivers in fostering thriving, resilient families.
   </div>
 </header>
 
-<div class="people-wrapper">
+<!-- CONTENT -->
+<div class="container">
 
-  <!-- ANKE (links) -->
-  <section class="person-section" id="anke-section">
-    <img src="img/anke.jpg" alt="Anke Weber" class="person-photo">
-    <div class="person-text">
-      <h2>Anke Weber, Dr. phil.</h2>
-      <p>Founder, Researcher</p>
-      <p>
-        My name is Anke Weber. I am a Researcher focusing on developmental and
-        educational psychology, family interactions, and child development.
-      </p>
-      <p><strong>Languages:</strong> English, German, French</p>
-    </div>
-  </section>
+  <div class="people-wrapper">
 
-  <!-- ZIWEN (rechts) -->
-  <section class="person-section" id="ziwen-section">
-    <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="person-photo">
-    <div class="person-text">
-      <h2>Ziwen Teuber, Dr. rer. nat.</h2>
-      <p>Founder, Senior Researcher and Facilitator</p>
-      <p>
-        My name is Ziwen Teuber. I am a Senior Researcher holding PhD supervision
-        rights and lead the FNR CORE project UPICAS.
-      </p>
-      <p><strong>Languages:</strong> English, German, Mandarin</p>
-    </div>
-  </section>
+    <!-- ANKE (links) -->
+    <section class="person-section" id="anke-section">
+      <img src="img/anke.jpg" alt="Anke Weber" class="person-photo">
+      <div>
+        <h2>Anke Weber, Dr. phil.</h2>
+        <p><strong>Founder, Researcher</strong></p>
+        <p>
+          My name is Anke Weber. I am a Researcher focusing on developmental and
+          educational psychology, with a particular interest in family interactions
+          and child development. My work combines rigorous research methodologies
+          with practical applications.
+        </p>
+        <p><strong>Languages:</strong> English, German, French</p>
+      </div>
+    </section>
+
+    <!-- ZIWEN (rechts) -->
+    <section class="person-section" id="ziwen-section">
+      <img src="img/IMG_4996.jpg" alt="Ziwen Teuber" class="person-photo">
+      <div>
+        <h2>Ziwen Teuber, Dr. rer. nat.</h2>
+        <p><strong>Founder, Senior Researcher and Facilitator</strong></p>
+        <p>
+          I am a Senior Researcher holding PhD supervision rights and lead the
+          FNR CORE project “Unpacking Parental Involvement in Challenging Achievement
+          Situations” (UPICAS). My research focuses on parent–child interactions
+          and family well-being.
+        </p>
+        <p><strong>Languages:</strong> English, German, Mandarin</p>
+      </div>
+    </section>
+
+  </div>
 
 </div>
 
